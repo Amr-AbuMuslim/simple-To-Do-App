@@ -1,0 +1,114 @@
+/*  */
+body {
+  background: linear-gradient(50deg, black, rgb(79, 209, 79), rgb(90, 73, 41));
+  min-height: 100vh;
+}
+.clearButton{
+  background-color: aliceblue;
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+}
+.mainAPP {
+  width: 700px;
+  background-color: whitesmoke;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+header {
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 5px 5px 5px rgb(58, 78, 28);
+  padding: 20px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+input {
+  flex: 1;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 30px;
+  font-size: 30px;
+}
+button {
+  background-color: rgb(42, 165, 42);
+  border-radius: 20px;
+  padding: 15px 16px;
+  border: none;
+  font-size: larger;
+  cursor: pointer;
+}
+ul {
+  padding: 30px;
+}
+.lists ul li {
+  font-size: 25px;
+  list-style: none;
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.lists ul li span {
+  font-weight: 900;
+  position: absolute;
+  right: 50px;
+  top: 0px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.lists ul li span:hover {
+  background-color: rgb(175, 156, 156);
+  opacity: 0.9;
+}
+.lists ul li i {
+  font-weight: 900;
+  position: absolute;
+  right: 150px;
+  top: 0px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.lists ul li::before {
+  content: " ";
+  background-image: url("unchecked-checkbox-icon-14.jpg");
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -40px;
+  background-size: cover;
+  transition: 0.5s;
+}
+.lists ul li.checked {
+  text-decoration: line-through;
+}
+.lists ul li.checked::before {
+  background-image: url(checked_checkbox.png);
+}
+@media (max-width: 768px) {
+  .mainAPP {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 350px;
+  }
+  .row {
+    width: 50px;
+    margin-left: -45px;
+  }
+  input {
+    font-size: 20px;
+  }
+  button {
+    padding: 10px;
+  }
+}
